@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 jobs:
   commitlint:
@@ -11,20 +14,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 2
 
       - name: Validate commit messages
         run: |
           PATTERN='^(feat|fix|docs|chore|refactor|test|ci|style|perf)(\(.+\))?: .+'
           FAILED=0
+
+          if [ "${{ github.event_name }}" = "push" ]; then
+            COMMITS=$(git log --format='%s' HEAD~1..HEAD)
+          else
+            COMMITS=$(git log --format='%s' origin/main..HEAD)
+          fi
+
           while IFS= read -r msg; do
+            [ -z "$msg" ] && continue
             if ! echo "$msg" | grep -qE "$PATTERN"; then
               echo "INVALID: $msg"
               echo "  Must match: <type>(<scope>): <description>"
               echo "  Types: feat, fix, docs, chore, refactor, test, ci, style, perf"
               FAILED=1
             fi
-          done < <(git log --format='%s' origin/main..HEAD)
+          done <<< "$COMMITS"
 
           if [ "$FAILED" -eq 1 ]; then
             echo ""
