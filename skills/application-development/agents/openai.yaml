@@ -1,0 +1,4 @@
+interface:
+  display_name: "Application Development"
+  short_description: "Build scalable apps with official framework best practices"
+  default_prompt: "Use $application-development to implement this feature with official Next.js, React, TypeScript, accessibility, and performance best practices."

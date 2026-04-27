@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:neo4j.com)",
+      "Bash(git checkout:*)",
+      "WebFetch(domain:help.getzep.com)",
+      "WebFetch(domain:www.getzep.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(gh api:*)",
+      "WebSearch",
+      "Bash(grep -r \"lite\\\\|fast\\\\|quick\\\\|minimal\" /Users/delaghetto/Speqq/speqq_v1/poc/fingerprint/.venv/lib/python3.12/site-packages/graphiti_core/*.py)",
+      "Bash(gh issue:*)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(python -c \":*)",
+      "Bash(ls /Users/delaghetto/Speqq/speqq_v1/poc/fingerprint/.venv/bin/python*)",
+      "Bash(ls /Users/delaghetto/Speqq/speqq_v1/poc/fingerprint/venv/bin/python*)",
+      "Bash(brew list:*)",
+      "Bash(ls node_modules/.bin/eslint*)",
+      "Bash(pnpm list:*)",
+      "Bash(pip3 install:*)",
+      "Bash(ruff check:*)",
+      "Bash(python3 -m pytest tests/test_app_headless.py -v)",
+      "Bash(python3 -m pytest tests/test_prd_a_api_client.py -v)",
+      "Bash(python3 -m pytest tests/test_prd_a_login_polish.py -v)",
+      "Bash(python3 -m ruff check speqq_cli/app.py speqq_cli/screens/login.py speqq_cli/__main__.py speqq_cli/widgets/chat_panel.py tests/test_prd_a_login_polish.py)",
+      "Bash(python3 -m pytest tests/ -v)",
+      "Bash(head -10 src/*.py)",
+      "Bash(grep -E \"^==|^$|^\\\\s*\"\"|^\\\\s*#\")",
+      "mcp__zapier__google_sheets_update_spreadsheet_row",
+      "mcp__zapier__google_sheets_update_spreadsheet_row_s",
+      "Bash(curl -sL https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/packages/server/src/server/streamableHttp.ts)",
+      "Bash(curl -sL https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/packages/node/src/streamableHttp.ts)",
+      "WebFetch(domain:docs.datadoghq.com)",
+      "mcp__zapier__google_sheets_create_spreadsheet_column",
+      "mcp__zapier__google_sheets_create_spreadsheet_row",
+      "WebFetch(domain:supabase.com)",
+      "WebFetch(domain:resend.com)"
+    ]
+  }
+}

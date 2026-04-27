@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD"
+  short_description: "Write production-grade PRDs with validation"
+  default_prompt: "Use $prd to draft an implementation-ready PRD with user capabilities, testable requirements, and a final validation verdict."
