@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Validates commit messages follow Conventional Commits format.
+# Types: feat, fix, docs, chore, refactor, test, ci, style, perf
+# Format: <type>(<optional-scope>): <description>
+#
+
+MSG=$(head -1 "$1")
+PATTERN='^(feat|fix|docs|chore|refactor|test|ci|style|perf)(\(.+\))?: .+'
+
+if ! echo "$MSG" | grep -qE "$PATTERN"; then
+  echo ""
+  echo "COMMIT REJECTED — invalid message format."
+  echo ""
+  echo "  Got:      $MSG"
+  echo "  Expected: <type>(<scope>): <description>"
+  echo ""
+  echo "  Types: feat | fix | docs | chore | refactor | test | ci | style | perf"
+  echo "  Examples:"
+  echo "    feat(skills): add supabase-rls skill"
+  echo "    fix: correct broken frontmatter in development-workflow"
+  echo "    docs(context): update SYSTEM.md with new service"
+  echo ""
+  exit 1
+fi
