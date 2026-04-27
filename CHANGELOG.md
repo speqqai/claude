@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/speqqai/claude/compare/v1.0.1...v1.1.0) (2026-04-27)
+
+
+### Features
+
+* **skills:** add claude-release-workflow skill ([91224f2](https://github.com/speqqai/claude/commit/91224f2a28803def2f6f5be2ba1efcd900bb9465))
+* **skills:** add claude-release-workflow skill ([91224f2](https://github.com/speqqai/claude/commit/91224f2a28803def2f6f5be2ba1efcd900bb9465))
+* **skills:** add claude-release-workflow skill ([b36adb3](https://github.com/speqqai/claude/commit/b36adb339e5f29e5f5973ddacdd4b58b2fdb4b95))
+
 ## [1.0.1](https://github.com/speqqai/claude/compare/v1.0.0...v1.0.1) (2026-04-27)
 
 
