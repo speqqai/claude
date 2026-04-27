@@ -1,6 +1,6 @@
 # Skills Directory
 
-This directory is the shared skills library used by `.codex/skills`.
+Shared Claude Code skills for the Speqq team.
 
 ## Available Skills
 
@@ -14,9 +14,11 @@ This directory is the shared skills library used by `.codex/skills`.
 | `create-documentation`             | `documentation-writer`             | Write and maintain internal technical documentation in the `content/` docs surface.                                    |
 | `create-prd`                       | `prd`                              | Create or review implementation-ready PRDs with explicit scope, testable requirements, and validation gates.           |
 | `development-workflow`             | `development-workflow`             | Orchestrate end-to-end feature delivery across PRD, design, implementation, validation, cleanup, docs, and approval.   |
+| `figma-implement-design`           | `figma-implement-design`           | Translate Figma designs into production-ready code with 1:1 visual fidelity.                                           |
 | `learn-frontend-design`            | `frontend-design`                  | Create distinctive, production-grade frontend interfaces with strong visual direction and polished execution.          |
 | `learn-mcp`                        | `mcp-builder`                      | Build high-quality MCP servers and tool surfaces for external integrations.                                            |
 | `learn-next-js-framework`          | `next-js-framework`                | Apply Next.js App Router patterns for production React applications.                                                   |
+| `llm-obs-eval`                     | `llm-obs-eval`                     | Run agent evaluations via Datadog LLM Observability Experiments.                                                       |
 | `mastering-typescript`             | `mastering-typescript`             | Apply modern, enterprise-grade TypeScript patterns across app and API code.                                            |
 | `pr-preflight`                     | `pr-preflight`                     | Run a strict pre-PR pass/fail checklist before submitting or shipping changes.                                         |
 | `read-about-context-engine`        | `context-engine`                   | Design, build, query, and debug Graphiti/Neo4j-based context graphs for agent memory.                                  |
