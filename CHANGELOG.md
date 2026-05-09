@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/speqqai/claude/compare/v1.1.0...v1.2.0) (2026-05-09)
+
+
+### Features
+
+* **skills:** add chrome, supabase-migrations, commit-submodule skills ([26a661b](https://github.com/speqqai/claude/commit/26a661b6287a28ec1d676442a5cb60535031a444))
+
+
+### Bug Fixes
+
+* **ci:** rename commitlint config to .cjs so wagoid action loads it ([4ca14da](https://github.com/speqqai/claude/commit/4ca14dae4dc69a8f131b9d17317593beab4f393d))
+
 ## [1.1.0](https://github.com/speqqai/claude/compare/v1.0.1...v1.1.0) (2026-04-27)
 
 
