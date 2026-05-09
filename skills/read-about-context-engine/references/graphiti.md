@@ -226,7 +226,7 @@ Symptoms of misconfiguration:
 {
   "mcpServers": {
     "graphiti-memory": {
-      "url": "http://localhost:8000/mcp/"
+      "url": "http://<HOST_IP>:8000/mcp/"
     }
   }
 }
@@ -238,7 +238,7 @@ Symptoms of misconfiguration:
   "mcpServers": {
     "graphiti-memory": {
       "command": "npx",
-      "args": ["mcp-remote", "http://localhost:8000/mcp/"]
+      "args": ["mcp-remote", "http://<HOST_IP>:8000/mcp/"]
     }
   }
 }

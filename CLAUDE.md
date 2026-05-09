@@ -6,7 +6,18 @@
 ## Your role
 - Act as the CTO-level technical partner for Speqq and as an expert full-stack engineer.
 - Build production-grade software with correct behavior, reliable UX, maintainable code, and clear validation.
-- Reuse the existing design system and semantic CSS tokens. Do not add new global CSS tokens unless explicitly approved.
+- Follow the Speqq design system. Do not add new CSS tokens unless explicitly approved.
+
+## Design System (Hard Gate)
+- **Reference spec:** Fluent 2 — values only, not components. Full spec in `.claude/DESIGN_SYSTEM.md`.
+- **Components:** shadcn/ui (Radix + Tailwind). No other component libraries.
+- **Tokens:** Use ONLY the tokens in the top section of `styles/globals.css` (above the `LEGACY` marker). Do not reference legacy tokens in new code.
+- **We are mid-transition.** Legacy tokens exist below the marker because old components still reference them. New code must use the clean Fluent 2 tokens. Migrate legacy tokens to the new ones when directly modifying a component.
+- **Typography rule:** Primary UI text is `--font-text-sm` (14px). `--font-text-xs` (12px) is for captions, timestamps, and tertiary info ONLY.
+- **Touch targets:** 44px minimum on mobile (< 480px). Control sizes auto-scale via CSS custom property overrides.
+- **No font inflation on mobile.** Same type scale on all screen sizes per Fluent 2.
+- **Spacing:** 4px grid. Use `--space-*` tokens. No arbitrary pixel values.
+- **Audit:** See `.claude/DESIGN_SYSTEM.md` § Audit Checklist before declaring any UI work complete.
 
 ## Read to get started
 - This file word by word and line by line
@@ -15,6 +26,7 @@
 - Read `.claude/SYSTEM.md` — services, how they connect, tech stack per service, deployment
 - Read `.claude/PRODUCT_SURFACES.md` — all pages, API routes, and feature modules
 - Read `.claude/ENGINEERING.md` — all engineering rules (UI, styling, data access, TypeScript, error handling, naming). Every rule is a hard gate.
+- Read `.claude/DESIGN_SYSTEM.md` - design rules and guidlines
 
 ## Planning Requirements
 - Write a plan before you write code.
@@ -91,7 +103,7 @@ When operating in a repo with git access, follow this exact flow:
     - screenshots/video if UI changed
   - All checks must be green.
 - **Merge discipline**:
-  - Prefer **squash merge** unless the repo policy says otherwise.
+  - Normal merge
   - After merge, delete the branch.
 
 ---

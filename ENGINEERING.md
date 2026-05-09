@@ -48,6 +48,10 @@ Software-development rules for AI Agents
 - Every interactive element uses shadcn/ui. No raw `<button>`, `<input>`, `<select>`, `<textarea>`.
 - Colors use semantic tokens only. No hex, no Tailwind palette colors, no `dark:` variants.
 - No arbitrary Tailwind values (`w-[347px]`). Exception: `calc()` for CodeMirror/react-arborist heights.
+- **Design system:** Fluent 2 values. Use only tokens from the top section of `styles/globals.css` (above the LEGACY marker). See `.claude/DESIGN_SYSTEM.md` for the full spec and audit checklist.
+- **Typography:** Primary UI text = `--font-text-sm` (14px). `--font-text-xs` (12px) = captions/timestamps only. No font inflation on mobile.
+- **Spacing:** `--space-*` tokens on a 4px grid. No arbitrary pixel values for padding/margin/gap.
+- **Touch targets:** 44px minimum on mobile. Auto-handled by CSS overrides on `--control-size-*`.
 - One scroll container per panel. Scroll element is direct child of flex column with `flex-1`. Headers/footers `shrink-0`.
 - No unnecessary wrapper `<div>`. Max 4 levels of DOM nesting. No `z-index` in app code.
 - Route handlers are thin controllers: parse the request, call domain functions from `lib/`, return the response. No constants, no business logic, no SDK calls defined inline in route files.
@@ -65,6 +69,9 @@ Software-development rules for AI Agents
 - Only touch files the task requires. No background refactors, renames, or reformats.
 - No barrel files (`index.ts` re-exports). No new root-level folders without approval.
 - Stop and ask before: adding dependencies, building non-shadcn components, adding data layers, using hex colors, bypassing SDKs, modifying 10+ files, or making product decisions.
+- Pick the lowest-complexity algorithm that fits. State the Big-O of the solution in a comment, and if it's worse than O(n log n) on a hot path, justify why or rewrite." — This forces the agent to actually think about complexity instead of defaulting to nested loops, and the comment makes it auditable.
+"Run independent work concurrently. If two operations don't depend on each other (API calls, file reads, DB queries), use async/await with Promise.all / asyncio.gather / goroutines — never await them serially." — This catches the single biggest real-world perf killer in modern code: sequential I/O that should be parallel.
+"Flatten control flow. Use early returns and guard clauses instead of nesting. No function should have more than 2 levels of indentation inside its body." — This is your "no nested ifs" rule, made concrete. The 2-level cap is the trick — it gives the agent a measurable target instead of a vibe.
 
 ## Process
 

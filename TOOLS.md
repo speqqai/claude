@@ -42,7 +42,7 @@ Keys live in Doppler `tools` config, not in `docker/.env.dev`. Retrieve with `do
 | Server-side route latency (p50/p95) | Query APM traces: `api.datadoghq.com/api/v2/spans/events/search`, filter `service:speqq-web operation_name:next.request` |
 | Web vitals (TTFB, FCP, LCP, CLS, INP) | Query RUM views: `api.datadoghq.com/api/v2/rum/events/search`, filter `service:speqq-web @type:view` |
 | Application logs | Query logs: `api.datadoghq.com/api/v2/logs/events/search`, filter `service:speqq-web` |
-| Service health status | `curl http://localhost:3000/api/health \| jq .` |
+| Service health status | `curl <HOST_IP:3000/api/health \| jq .` |
 | APM agent status | `docker exec speqq-datadog-agent agent status` |
 | Landing page PostHog metrics | `npm run metrics:landing` |
 | Workspace PostHog metrics | `npm run metrics:workspace` |
