@@ -121,4 +121,4 @@ Note: CI migration workflows are planned. Once added, `supabase db push` to dev/
 - `supabase migration repair` is the only sanctioned tool for drift. Do not mutate `supabase_migrations.schema_migrations` by hand.
 - Before declaring done, confirm `supabase migration list --linked` shows zero pending rows in the target environment.
 
-See also: `.claude/ENGINEERING.md` (engineering hard gates), `.claude/skills/supabase-postgres-best-practices/SKILL.md` (schema/RLS rules), `.claude/skills/pr-preflight/SKILL.md` Step 7 (Supabase RLS gate).
+See also: `.agents/.claude/ENGINEERING.md` (engineering hard gates), `.claude/skills/supabase-postgres-best-practices/SKILL.md` (schema/RLS rules), `.claude/skills/pr-preflight/SKILL.md` Step 7 (Supabase RLS gate).

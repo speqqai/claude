@@ -82,7 +82,6 @@ Located in `features/`. Each module owns its UI components, hooks, and tests.
 | `workspace-settings/` | Settings pages and forms |
 | `account-management/` | User account, profile settings |
 | `cli/` | CLI TUI integration logic |
-| `ide-extension/` | IDE extension support |
 | `agentContext/` | Agent context retrieval and display |
 | `new-user/` | New user onboarding, email templates (confirmation code, password reset, waitlist confirmation, waitlist invite) |
 | `manifesto/` | Manifesto page components |
